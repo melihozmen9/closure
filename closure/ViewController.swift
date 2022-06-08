@@ -11,9 +11,27 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let resultfunc = topla(10, 20)
+        
+        // closure
+        var resultclosure:(Int,Int) -> Int = { sayi1,sayi2 in
+            return sayi1 + sayi2
+        }
+        print(resultclosure(10,2))
+        var kisatopla: (Int,Int) -> Int = {
+            return $0+$1
+        }
+        print(kisatopla(10,2))
     }
 
+    // toplama işlemi
+    
+    // fonksiyon olarak kullanımı
+    
+    func topla(_ sayi1:Int,_ sayi2:Int) -> Int{
+        return sayi1+sayi2
+    }
 
 }
 
